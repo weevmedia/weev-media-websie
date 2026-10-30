@@ -21,16 +21,15 @@ export default function Home() {
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-line bg-void/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="flex items-center gap-3">
+          <a href="#top" className="flex items-center gap-8">
             <Image
-              src="/logo-mark.webp"
-              alt="weev Media mark"
-              width={36}
-              height={36}
-              className="rounded-md"
+              src="/wm-mark.png"
+              alt="Weev Media logo"
+              width={177}
+              height={72}
             />
-            <span className="text-lg font-semibold tracking-tight">
-              weev Media
+            <span className="font-script text-[72px] leading-none">
+              Weev Media
             </span>
           </a>
           <div className="hidden items-center gap-8 text-sm text-fog sm:flex">
@@ -80,7 +79,7 @@ export default function Home() {
               .
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-fog">
-              weev Media builds practical products with the latest artificial
+              Weev Media builds practical products with the latest artificial
               intelligence and a modern tech stack — a small team, minimum
               resources, maximum impact.
             </p>
@@ -106,7 +105,7 @@ export default function Home() {
             />
             <Image
               src="/wm-logo-refined.webp"
-              alt="weev Media neon logo"
+              alt="Weev Media neon logo"
               width={768}
               height={768}
               priority
@@ -186,7 +185,7 @@ export default function Home() {
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-fog">
             <p>
-              weev Media started with a simple observation: the most annoying
+              Weev Media started with a simple observation: the most annoying
               problems in daily life are also the most solvable — they just
               need someone to apply the latest technology to them properly.
             </p>
@@ -210,10 +209,10 @@ export default function Home() {
             conversation — we&rsquo;d like to hear it.
           </p>
           <a
-            href="mailto:hello@weevmedia.com"
+            href="mailto:contactus@weevmedia.com"
             className="mt-8 inline-block rounded-full bg-neon px-8 py-3.5 font-semibold text-void transition hover:brightness-110"
           >
-            hello@weevmedia.com
+            contactus@weevmedia.com
           </a>
         </div>
       </section>
@@ -223,13 +222,13 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-fog sm:flex-row">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo-mark.webp"
-              alt="weev Media mark"
+              src="/wm-logo-refined.webp"
+              alt="Weev Media logo"
               width={28}
               height={28}
               className="rounded-md"
             />
-            <span>© 2026 weev Media. All rights reserved.</span>
+            <span>© 2026 Weev Media. All rights reserved.</span>
           </div>
           <p className="font-mono text-xs uppercase tracking-widest">
             Strategic. Creative. Connected.
