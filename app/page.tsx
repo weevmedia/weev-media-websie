@@ -21,15 +21,18 @@ export default function Home() {
     <div className="flex min-h-full flex-col bg-void text-zinc-100">
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-line bg-void/80 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="flex items-center gap-8">
-            <Image
-              src="/wm-mark.png"
-              alt="Weev Media logo"
-              width={177}
-              height={72}
-            />
-            <span className="font-script text-[72px] leading-none">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+          <a href="#top" className="flex items-center gap-3">
+            <span className="block h-10 w-10 overflow-hidden rounded-full">
+              <Image
+                src="/weevmedia.jpeg"
+                alt="Weev Media logo"
+                width={45}
+                height={40}
+                className="h-10 w-10 scale-[1.32] object-cover"
+              />
+            </span>
+            <span className="font-script text-3xl leading-none translate-y-[3px]">
               Weev Media
             </span>
           </a>
@@ -65,7 +68,7 @@ export default function Home() {
           aria-hidden
           className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-neon/15 blur-[120px]"
         />
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-28 lg:grid-cols-2">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-24">
           <div>
             <p className="mb-5 inline-block rounded-full border border-line bg-panel px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-ice">
               Technology startup
@@ -98,20 +101,6 @@ export default function Home() {
                 Get in touch
               </a>
             </div>
-          </div>
-          <div className="relative mx-auto w-full max-w-md">
-            <div
-              aria-hidden
-              className="absolute inset-0 rounded-3xl bg-neon/20 blur-[80px]"
-            />
-            <Image
-              src="/wm-logo-refined.webp"
-              alt="Weev Media neon logo"
-              width={768}
-              height={768}
-              priority
-              className="relative rounded-3xl border border-line"
-            />
           </div>
         </div>
       </section>
@@ -216,10 +205,10 @@ export default function Home() {
             conversation — we&rsquo;d like to hear it.
           </p>
           <a
-            href="mailto:contactus@weevmedia.com"
+            href="mailto:contact-us@weevmedia.com"
             className="mt-8 inline-block rounded-full bg-neon px-8 py-3.5 font-semibold text-void transition hover:brightness-110"
           >
-            contactus@weevmedia.com
+            contact-us@weevmedia.com
           </a>
         </div>
       </section>
@@ -228,14 +217,16 @@ export default function Home() {
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-fog sm:flex-row">
           <div className="flex items-center gap-3">
-            <Image
-              src="/wm-logo-refined.webp"
-              alt="Weev Media logo"
-              width={28}
-              height={28}
-              className="rounded-md"
-            />
-            <span>© 2026 Weev Media. All rights reserved.</span>
+            <span className="block h-7 w-7 overflow-hidden rounded-full">
+              <Image
+                src="/weevmedia.jpeg"
+                alt="Weev Media logo"
+                width={28}
+                height={28}
+                className="h-7 w-7 scale-[1.32] object-cover"
+              />
+            </span>
+            <span>© 2026-2027 Weev Media. All rights reserved.</span>
           </div>
           <p className="font-mono text-xs uppercase tracking-widest">
             Strategic. Creative. Connected.
