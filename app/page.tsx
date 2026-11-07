@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const pillars = [
   {
@@ -161,6 +162,12 @@ export default function Home() {
                 nudges on prices and repurchases — your money, accounted for,
                 automatically.
               </p>
+              <Link
+                href="/products/retally"
+                className="mt-6 inline-flex rounded-full border border-neon/50 px-5 py-2.5 text-sm font-semibold text-neon transition hover:bg-neon hover:text-void"
+              >
+                Explore ReTally <span aria-hidden className="ml-2">→</span>
+              </Link>
             </div>
             <div className="flex flex-col justify-center rounded-2xl border border-dashed border-line bg-void p-8">
               <h3 className="text-2xl font-bold text-fog">More in the lab</h3>
