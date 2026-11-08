@@ -21,7 +21,7 @@ export default function Home() {
     <div className="flex min-h-full flex-col bg-void text-zinc-100">
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-line bg-void/80 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+	<nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
           <a href="#top" className="flex items-center gap-3">
             <span className="block h-10 w-10 overflow-hidden rounded-full">
               <Image
