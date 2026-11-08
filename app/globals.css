@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #fbfaff;
+  --color-void: #f7faf8;
   --color-panel: #ffffff;
-  --color-line: #ece9f5;
-  --color-neon: #7046d8;
-  --color-ice: #9b7ce8;
-  --color-fog: #777287;
+  --color-line: #e4ece6;
+  --color-neon: #187a55;
+  --color-ice: #6fba8e;
+  --color-fog: #65756b;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-script: var(--font-great-vibes), cursive;
@@ -14,8 +14,8 @@
 
 html { scroll-behavior: smooth; }
 body {
-  background: #fbfaff;
-  color: #17152b;
+  background: #f7faf8;
+  color: #17231d;
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
