@@ -1,82 +1,86 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const pillars = [
-  { number: "01", title: "AI with a purpose", body: "We use intelligent technology where it makes everyday experiences simpler, clearer, and more useful." },
-  { number: "02", title: "Built for real life", body: "Thoughtful products solve specific problems. We focus on the details that make a product genuinely helpful." },
-  { number: "03", title: "Small team. Big focus.", body: "A lean, modern approach lets us move quickly, stay curious, and put our energy into what matters." },
+const capabilities = [
+  { number: "01", title: "Applied AI", body: "We bring AI into practical workflows—helping people find information, reduce repetitive work, and make better use of their data.", icon: "✳" },
+  { number: "02", title: "Intelligent software", body: "We design and engineer modern digital products that connect thoughtful experiences with reliable technology.", icon: "⌘" },
+  { number: "03", title: "Product thinking", body: "We start with the problem, shape a clear experience, and build technology around what people actually need.", icon: "↗" },
 ];
 
+function Brand() {
+  return <Link href="/" aria-label="Weev Media home" className="flex items-center gap-3"><span className="block h-10 w-10 overflow-hidden rounded-full"><Image src="/weevmedia.jpeg" alt="Weev Media logo" width={45} height={40} className="h-10 w-10 scale-[1.32] object-cover" /></span><span className="font-script translate-y-[2px] text-3xl leading-none text-[#173b2b]">Weev Media</span></Link>;
+}
+
 export default function Home() {
-  return (
-    <main className="min-h-screen overflow-hidden bg-[#f7faf8] text-[#17231d]">
-      <header className="sticky top-0 z-50 border-b border-[#e4ece6] bg-white/90 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-          <Link href="#top" className="flex items-center gap-3">
-            <span className="block h-10 w-10 overflow-hidden rounded-full"><Image src="/weevmedia.jpeg" alt="Weev Media logo" width={45} height={40} className="h-10 w-10 scale-[1.32] object-cover" /></span>
-            <span className="font-script translate-y-[2px] text-3xl leading-none text-[#172d23]">Weev Media</span>
-          </Link>
-          <div className="hidden items-center gap-8 text-sm font-medium text-[#52665a] sm:flex">
-            <a href="#approach" className="transition hover:text-[#187a55]">Approach</a>
-            <a href="#products" className="transition hover:text-[#187a55]">Products</a>
-            <a href="#about" className="transition hover:text-[#187a55]">About</a>
-            <a href="#contact" className="rounded-full bg-[#187a55] px-5 py-2.5 text-white shadow-lg shadow-violet-200 transition hover:-translate-y-0.5 hover:bg-[#126443]">Let’s talk <span aria-hidden>↗</span></a>
-          </div>
-          <a href="#contact" className="rounded-full bg-[#187a55] px-4 py-2.5 text-sm font-semibold text-white sm:hidden">Contact</a>
-        </nav>
-      </header>
+  return <main className="min-h-screen overflow-hidden bg-[#f7faf8] text-[#17231d]">
+    <header className="sticky top-0 z-50 border-b border-[#e2ebe4] bg-white/90 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+        <Brand />
+        <div className="hidden items-center gap-8 text-sm font-medium text-[#52665a] sm:flex">
+          <a href="#capabilities" className="transition hover:text-[#16784f]">What we do</a>
+          <a href="#products" className="transition hover:text-[#16784f]">Products</a>
+          <a href="#about" className="transition hover:text-[#16784f]">About</a>
+          <a href="#contact" className="rounded-full bg-[#176b49] px-5 py-2.5 text-white shadow-lg shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-[#10583b]">Let’s talk ↗</a>
+        </div>
+        <a href="#contact" className="rounded-full bg-[#176b49] px-4 py-2.5 text-sm font-semibold text-white sm:hidden">Contact</a>
+      </nav>
+    </header>
 
-      <section id="top" className="relative">
-        <div aria-hidden className="pointer-events-none absolute -right-40 -top-20 h-[34rem] w-[34rem] rounded-full bg-[#cce8d5]/60 blur-3xl" />
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[.92fr_1.08fr]">
-          <div className="relative z-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#e7ddff] bg-white px-4 py-2 text-xs font-bold tracking-wide text-[#187a55] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#27a66d]" /> AI-DRIVEN TECHNOLOGY COMPANY</span>
-            <h1 className="mt-7 max-w-2xl text-5xl font-bold leading-[1.04] tracking-[-.055em] sm:text-6xl lg:text-[4.6rem]">Technology that solves real problems. <span className="bg-gradient-to-r from-[#187a55] to-[#6fba8e] bg-clip-text text-transparent">Intelligence with purpose.</span></h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-[#65756b]">Weev Media is an AI-focused technology company. We turn complex, everyday problems into useful digital products with applied AI, modern software engineering, and thoughtful design.</p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#products" className="rounded-full bg-[#187a55] px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-violet-200 transition hover:-translate-y-0.5 hover:bg-[#126443]">Explore our products <span aria-hidden>→</span></a>
-              <a href="#about" className="rounded-full border border-[#d8e4db] bg-white px-7 py-3.5 text-sm font-semibold text-[#2d4034] transition hover:border-[#9bc9ad]">Get to know us</a>
+    <section className="relative isolate overflow-hidden">
+      <div aria-hidden className="absolute -right-36 -top-28 -z-10 h-[42rem] w-[42rem] rounded-full bg-[#d8ecdf] blur-3xl" />
+      <div aria-hidden className="absolute -left-32 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#e8f1df] blur-3xl" />
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1fr_.9fr]">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#dce9df] bg-white px-4 py-2 text-xs font-bold tracking-[.12em] text-[#176b49] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#36a56f]" /> AI-DRIVEN TECHNOLOGY COMPANY</span>
+          <h1 className="mt-7 max-w-3xl text-5xl font-bold leading-[1.03] tracking-[-.06em] sm:text-6xl lg:text-[4.65rem]">We turn complex problems into <span className="text-[#16784f]">intelligent products.</span></h1>
+          <p className="mt-7 max-w-xl text-lg leading-8 text-[#637469]">Weev Media is a technology company focused on practical AI, modern software engineering, and digital experiences that make everyday work and life simpler.</p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href="#capabilities" className="rounded-full bg-[#176b49] px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-[#10583b]">Explore what we do <span className="ml-2">→</span></a>
+            <a href="#products" className="rounded-full border border-[#d6e3d9] bg-white px-7 py-3.5 text-sm font-semibold text-[#294536] transition hover:border-[#91bda0]">See our products</a>
+          </div>
+          <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#6c7b70]"><span>Applied AI</span><span>·</span><span>Software engineering</span><span>·</span><span>Digital products</span></div>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-[560px]">
+          <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#b9dfc7] via-[#e2f0e5] to-[#c5e8d4] blur-3xl" />
+          <div className="relative rounded-[2.2rem] border border-white/80 bg-white/90 p-5 shadow-[0_30px_90px_-35px_rgba(22,76,48,.28)] backdrop-blur sm:p-7">
+            <div className="flex items-center justify-between border-b border-[#e8efe9] pb-5"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-[#6d8b77]">The Weev approach</p><p className="mt-1 text-lg font-bold">From challenge to solution</p></div><div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e7f4eb] text-xl text-[#176b49]">✳</div></div>
+            <div className="mt-6 space-y-3">
+              <div className="rounded-2xl border border-[#e5eee7] bg-[#fbfdfb] p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e8f4ec] font-bold text-[#176b49]">01</span><div><p className="text-sm font-bold">Understand the problem</p><p className="mt-0.5 text-xs text-[#7a897e]">People, context, and the real need</p></div></div></div>
+              <div className="ml-5 h-4 w-px bg-[#b6d7c1]" />
+              <div className="rounded-2xl border border-[#d7e9dc] bg-[#f0f8f2] p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#d7eddf] font-bold text-[#176b49]">02</span><div><p className="text-sm font-bold">Apply the right technology</p><p className="mt-0.5 text-xs text-[#6d8374]">AI, software, and thoughtful design</p></div></div></div>
+              <div className="ml-5 h-4 w-px bg-[#b6d7c1]" />
+              <div className="rounded-2xl border border-[#d9e9dd] bg-white p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#176b49] font-bold text-white">03</span><div><p className="text-sm font-bold">Build something useful</p><p className="mt-0.5 text-xs text-[#7a897e]">A practical product or experience</p></div></div></div>
             </div>
-            <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#65756b]"><span className="flex items-center gap-2"><span className="text-[#16845b]">✓</span> Thoughtfully designed</span><span className="flex items-center gap-2"><span className="text-[#16845b]">✓</span> AI-powered problem solving</span><span className="flex items-center gap-2"><span className="text-[#16845b]">✓</span> Built for everyday life</span></div>
-          </div>
-          <div className="relative mx-auto w-full max-w-2xl">
-            <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#cce8d5] via-[#e2f1e7] to-[#c9edda] blur-2xl" />
-            <div className="relative grid grid-cols-[1.05fr_.95fr] gap-3 sm:gap-4">
-              <div className="flex min-h-[390px] flex-col justify-between rounded-[2rem] border border-white bg-white p-5 shadow-[0_25px_80px_-35px_rgba(62,40,120,.35)] sm:p-7">
-                <div><div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e9f5ed] text-xl text-[#187a55]">✳</div><p className="mt-6 text-xs font-bold uppercase tracking-[.2em] text-[#668273]">Our first product</p><h2 className="mt-2 text-3xl font-bold tracking-tight">ReTally</h2><p className="mt-3 text-sm leading-6 text-[#65756b]">Your everyday shopping, a little more organized.</p></div>
-                <div className="rounded-2xl bg-[#eef6f0] p-4"><div className="flex items-center justify-between text-xs text-[#65756b]"><span>Monthly spending</span><span>↗</span></div><p className="mt-2 text-3xl font-bold text-[#1d3025]">$126.95</p><div className="mt-3 h-2 rounded-full bg-[#dcebe0]"><div className="h-2 w-[38%] rounded-full bg-[#279b6b]" /></div><p className="mt-2 text-[11px] text-[#65756b]">A clearer view of your purchases</p></div>
-              </div>
-              <div className="mt-12 flex flex-col gap-3 sm:mt-16 sm:gap-4">
-                <div className="rounded-[2rem] bg-gradient-to-br from-[#31215e] to-[#7551c9] p-5 text-white shadow-xl shadow-violet-200 sm:p-7"><span className="text-xs font-semibold text-white/65">OUR APPROACH</span><p className="mt-12 text-2xl font-semibold leading-tight sm:text-3xl">Technology that feels simple.</p><div className="mt-5 h-px bg-white/20" /><p className="mt-4 text-xs leading-5 text-white/70">Useful by design. Considered in every detail.</p></div>
-                <div className="rounded-[2rem] border border-white bg-white p-5 shadow-[0_25px_80px_-35px_rgba(62,40,120,.35)] sm:p-7"><div className="flex items-center gap-3"><div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e7f8f1] text-lg text-[#16845b]">✦</div><div><p className="text-sm font-bold">Ideas into products</p><p className="text-xs text-[#8b8799]">From concept to everyday use</p></div></div><div className="mt-6 flex gap-2">{["Thoughtful","Modern","Useful"].map((item)=><span key={item} className="rounded-full bg-[#eff5f0] px-3 py-1.5 text-[10px] font-semibold text-[#756b8e]">{item}</span>)}</div></div>
-              </div>
-            </div>
+            <div className="mt-6 flex items-center justify-between rounded-xl bg-[#173d2b] px-4 py-3 text-white"><span className="text-xs font-semibold tracking-wide">INTELLIGENCE WITH PURPOSE</span><span className="text-lg text-[#9bd3ad]">↗</span></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="approach" className="border-y border-[#efecf6] bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#187a55]">What guides us</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">We use technology to make hard things easier.</h2><p className="mt-5 text-lg leading-8 text-[#65756b]">We identify meaningful problems, then combine AI, software engineering, and product thinking to build practical solutions.</p></div>
-          <div className="mt-12 grid gap-4 md:grid-cols-3">{pillars.map((p)=><article key={p.number} className="rounded-[1.75rem] border border-[#e7eee8] bg-[#fcfbff] p-7 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-100/70"><span className="font-mono text-xs text-[#6b9c7c]">{p.number}</span><h3 className="mt-8 text-xl font-bold">{p.title}</h3><p className="mt-3 leading-7 text-[#65756b]">{p.body}</p></article>)}</div>
+    <section id="capabilities" className="border-y border-[#e4ece6] bg-white">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+        <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#176b49]">What we do</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Technology should move things forward.</h2><p className="mt-5 text-lg leading-8 text-[#637469]">We bring together the right mix of intelligence, engineering, and product thinking to create solutions with a clear purpose.</p></div>
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {capabilities.map(item=><article key={item.number} className="rounded-[1.8rem] border border-[#e4ece6] bg-[#f9fcfa] p-7 transition hover:-translate-y-1 hover:border-[#b9d8c2] hover:shadow-xl hover:shadow-emerald-100/60 sm:p-9"><div className="flex items-center justify-between"><span className="font-mono text-xs text-[#7a9c84]">{item.number}</span><span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e7f3ea] text-xl text-[#176b49]">{item.icon}</span></div><h3 className="mt-9 text-xl font-bold">{item.title}</h3><p className="mt-3 leading-7 text-[#637469]">{item.body}</p></article>)}
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="products" className="relative overflow-hidden bg-[#edf5ef]">
-        <div aria-hidden className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-white/70 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <p className="text-xs font-bold uppercase tracking-[.22em] text-[#187a55]">A product from Weev Media</p><div className="mt-4 grid gap-10 lg:grid-cols-[1fr_.85fr] lg:items-center">
-            <div><h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Meet ReTally.</h2><p className="mt-2 text-lg font-semibold text-[#187a55]">Scan. Track. Save.</p><p className="mt-6 max-w-xl text-lg leading-8 text-[#6e6981]">Turn everyday receipts into a clearer picture of your spending. Catch duplicate charges, keep budgets on track, and make your next shopping trip a little smarter.</p><Link href="/products/retally" className="mt-8 inline-flex rounded-full bg-[#187a55] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-200 transition hover:-translate-y-0.5">Discover ReTally <span className="ml-2">→</span></Link></div>
-            <div className="rounded-[2rem] border border-white bg-white p-5 shadow-xl shadow-violet-200/60 sm:p-7"><div className="grid grid-cols-2 gap-3"><div className="rounded-2xl bg-[#edf5ef] p-4"><p className="text-xs text-[#817a96]">Receipts organized</p><p className="mt-2 text-2xl font-bold">All in one place</p></div><div className="rounded-2xl bg-[#e8f5ec] p-4"><p className="text-xs text-[#6d8b7e]">Spending insights</p><p className="mt-2 text-2xl font-bold text-[#177d5c]">At a glance</p></div></div><div className="mt-3 rounded-2xl bg-[#f7faf8] p-5"><div className="flex items-center justify-between"><span className="text-sm font-bold">Your shopping picture</span><span className="text-xs text-[#829087]">ReTally</span></div><div className="mt-5 flex h-28 items-end gap-2">{[38,58,46,75,55,88,66,96,72,83,62,90].map((v,i)=><div key={i} className="flex-1 rounded-t-md bg-gradient-to-t from-[#23865d] to-[#b5ddc2]" style={{height:v+"%"}} />)}</div><div className="mt-3 flex justify-between text-[10px] text-[#9b95aa]"><span>Organize</span><span>Understand</span><span>Shop smarter</span></div></div></div>
-          </div>
-        </div>
-      </section>
+    <section id="products" className="bg-[#edf5ef]">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+        <div className="flex flex-wrap items-end justify-between gap-5"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#176b49]">Our product portfolio</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Ideas made useful.</h2></div><p className="max-w-md text-base leading-7 text-[#637469]">Weev Media is the company behind a growing portfolio of focused digital products. ReTally is one example.</p></div>
+        <article className="mt-10 grid overflow-hidden rounded-[2rem] border border-white bg-white shadow-[0_25px_80px_-40px_rgba(22,76,48,.25)] lg:grid-cols-[1.05fr_.95fr]">
+          <div className="p-7 sm:p-10 lg:p-12"><span className="inline-flex rounded-full bg-[#e8f4ec] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.16em] text-[#176b49]">Featured product</span><div className="mt-7 flex items-center gap-3"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#176b49] text-2xl font-black text-white">R</span><span className="text-2xl font-bold">ReTally</span></div><h3 className="mt-7 text-3xl font-bold tracking-tight sm:text-4xl">A smarter way to keep track of every shop.</h3><p className="mt-5 max-w-xl leading-7 text-[#637469]">ReTally turns grocery receipts into useful information with receipt scanning, spending insights, duplicate checks, and smarter shopping lists.</p><Link href="/products/retally" className="mt-8 inline-flex rounded-full bg-[#176b49] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#10583b]">Explore ReTally <span className="ml-2">→</span></Link></div>
+          <div className="relative min-h-[300px] overflow-hidden bg-[#e5f2e8] p-7 sm:p-10"><div aria-hidden className="absolute -right-12 -top-12 h-64 w-64 rounded-full bg-[#b7ddc3] blur-3xl" /><div className="relative grid grid-cols-2 gap-3"><div className="rounded-2xl border border-white bg-white p-4 shadow-lg"><p className="text-xs text-[#718477]">Receipt capture</p><div className="mt-8 h-24 rounded-xl bg-[#f0f6f1] p-3"><div className="h-2 w-3/4 rounded bg-[#c8ddce]" /><div className="mt-3 h-2 w-full rounded bg-[#dce9df]" /><div className="mt-2 h-2 w-4/5 rounded bg-[#dce9df]" /><div className="mt-4 h-2 w-1/2 rounded bg-[#8ab99a]" /></div></div><div className="mt-8 rounded-2xl border border-white bg-white p-4 shadow-lg"><p className="text-xs text-[#718477]">Spending overview</p><div className="mt-7 flex h-24 items-end gap-2">{[35,60,45,80,55,92].map((v,i)=><div key={i} className="flex-1 rounded-t bg-[#27845a]" style={{height:v+"%"}} />)}</div></div><div className="col-span-2 rounded-2xl bg-[#17432e] p-5 text-white"><p className="text-xs uppercase tracking-[.16em] text-[#a8d6b7]">Scan · Track · Save</p><p className="mt-3 text-2xl font-bold">Every purchase, in perspective.</p></div></div></div>
+        </article>
+      </div>
+    </section>
 
-      <section id="about" className="bg-white"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[.7fr_1fr]"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#187a55]">About Weev Media</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">AI. Engineering. Impact.</h2></div><div className="space-y-5 text-lg leading-8 text-[#65756b]"><p>Weev Media is built around a simple belief: technology is most valuable when it solves a real problem. We apply AI and modern engineering to turn complex workflows and everyday frustrations into simpler experiences.</p><p>We combine artificial intelligence, software development, and human-centered design to create intelligent products and solutions with measurable practical value.</p></div></div></section>
+    <section id="about" className="bg-white"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[.7fr_1fr]"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#176b49]">About Weev Media</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Independent thinking. Intelligent technology.</h2></div><div className="space-y-5 text-lg leading-8 text-[#637469]"><p>Weev Media is an AI-focused technology company creating digital products that solve practical problems. We believe great technology should be capable under the hood and simple to use on the surface.</p><p>Our work brings together applied AI, modern software engineering, and human-centered product design—turning promising ideas into useful experiences.</p></div></div></section>
 
-      <section id="contact" className="bg-[#edf5ef]"><div className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 sm:py-24"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#187a55]">Start a conversation</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Have an idea worth exploring?</h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#65756b]">We’d love to hear about a product idea, a partnership, or a problem you think technology could solve.</p><a href="mailto:contact-us@weevmedia.com" className="mt-8 inline-flex rounded-full bg-[#187a55] px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-violet-200 transition hover:-translate-y-0.5">contact-us@weevmedia.com <span className="ml-2">↗</span></a></div></section>
+    <section id="contact" className="bg-[#edf5ef]"><div className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 sm:py-24"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#176b49]">Start a conversation</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Have a problem worth solving?</h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#637469]">Tell us what you’re exploring. We’re interested in ideas where AI and technology can make a meaningful difference.</p><a href="mailto:contact-us@weevmedia.com" className="mt-8 inline-flex rounded-full bg-[#176b49] px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-emerald-100 transition hover:-translate-y-0.5">contact-us@weevmedia.com ↗</a></div></section>
 
-      <footer className="border-t border-[#e4ece6] bg-white"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-[#748379] sm:flex-row sm:px-8"><Link href="/" className="flex items-center gap-3"><span className="block h-7 w-7 overflow-hidden rounded-full"><Image src="/weevmedia.jpeg" alt="Weev Media logo" width={28} height={28} className="h-7 w-7 scale-[1.32] object-cover" /></span><span>© 2026–2027 Weev Media. All rights reserved.</span></Link><span className="font-script text-2xl text-[#345642]">Strategic. Creative. Connected.</span></div></footer>
-    </main>
-  );
+    <footer className="border-t border-[#e2ebe4] bg-white"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-[#748379] sm:flex-row sm:px-8"><Brand /><span>© 2026–2027 Weev Media. All rights reserved.</span><span className="font-script text-2xl text-[#345642]">Intelligence with purpose.</span></div></footer>
+  </main>;
 }
