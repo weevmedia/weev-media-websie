@@ -22,14 +22,17 @@ export default function Home() {
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-line bg-void/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="flex items-center gap-8">
-            <Image
-              src="/wm-mark.png"
-              alt="Weev Media logo"
-              width={177}
-              height={72}
-            />
-            <span className="font-script text-[72px] leading-none">
+          <a href="#top" className="flex items-center gap-3">
+            <span className="block h-10 w-10 overflow-hidden rounded-full">
+              <Image
+                src="/weevmedia.jpeg"
+                alt="Weev Media logo"
+                width={45}
+                height={40}
+                className="h-10 w-10 scale-[1.32] object-cover"
+              />
+            </span>
+            <span className="font-script text-3xl leading-none translate-y-[3px]">
               Weev Media
             </span>
           </a>
@@ -228,14 +231,16 @@ export default function Home() {
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-fog sm:flex-row">
           <div className="flex items-center gap-3">
-            <Image
-              src="/wm-logo-refined.webp"
-              alt="Weev Media logo"
-              width={28}
-              height={28}
-              className="rounded-md"
-            />
-            <span>© 2026 Weev Media. All rights reserved.</span>
+            <span className="block h-7 w-7 overflow-hidden rounded-full">
+              <Image
+                src="/weevmedia.jpeg"
+                alt="Weev Media logo"
+                width={28}
+                height={28}
+                className="h-7 w-7 scale-[1.32] object-cover"
+              />
+            </span>
+            <span>© 2026-2027 Weev Media. All rights reserved.</span>
           </div>
           <p className="font-mono text-xs uppercase tracking-widest">
             Strategic. Creative. Connected.

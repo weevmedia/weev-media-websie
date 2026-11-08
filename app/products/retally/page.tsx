@@ -52,8 +52,16 @@ export default function ReTallyPage() {
       <header className="sticky top-0 z-40 border-b border-line bg-void/85 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <Link href="/" aria-label="Weev Media home" className="flex items-center gap-3">
-            <Image src="/wm-mark.png" alt="Weev Media" width={42} height={42} />
-            <span className="font-script text-4xl leading-none">Weev Media</span>
+            <span className="block h-10 w-10 overflow-hidden rounded-full">
+              <Image
+                src="/weevmedia.jpeg"
+                alt="Weev Media logo"
+                width={45}
+                height={40}
+                className="h-10 w-10 scale-[1.32] object-cover"
+              />
+            </span>
+            <span className="font-script text-3xl leading-none translate-y-[3px]">Weev Media</span>
           </Link>
           <div className="flex items-center gap-5 text-sm text-fog">
             <Link href="/#products" className="hidden transition hover:text-white sm:block">Other products</Link>
@@ -184,7 +192,18 @@ export default function ReTallyPage() {
 
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-fog sm:flex-row">
-          <Link href="/" className="flex items-center gap-3"><Image src="/wm-mark.png" alt="Weev Media" width={28} height={28} /><span>© 2026 Weev Media. All rights reserved.</span></Link>
+          <Link href="/" className="flex items-center gap-3">
+            <span className="block h-7 w-7 overflow-hidden rounded-full">
+              <Image
+                src="/weevmedia.jpeg"
+                alt="Weev Media logo"
+                width={28}
+                height={28}
+                className="h-7 w-7 scale-[1.32] object-cover"
+              />
+            </span>
+            <span>© 2026-2027 Weev Media. All rights reserved.</span>
+          </Link>
           <span className="font-mono text-[10px] uppercase tracking-[.2em]">ReTally · Scan · Track · Save</span>
         </div>
       </footer>
