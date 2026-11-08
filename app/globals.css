@@ -19,4 +19,4 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-::selection { background: rgba(112, 70, 216, .18); }
+::selection { background: rgba(23, 107, 73, .18); }
