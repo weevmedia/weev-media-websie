@@ -219,10 +219,10 @@ export default function Home() {
             conversation — we&rsquo;d like to hear it.
           </p>
           <a
-            href="mailto:contactus@weevmedia.com"
+            href="mailto:contact-us@weevmedia.com"
             className="mt-8 inline-block rounded-full bg-neon px-8 py-3.5 font-semibold text-void transition hover:brightness-110"
           >
-            contactus@weevmedia.com
+            contact-us@weevmedia.com
           </a>
         </div>
       </section>
