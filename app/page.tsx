@@ -8,12 +8,12 @@ const capabilities = [
 ];
 
 function Brand() {
-  return <Link href="/" aria-label="Weev Media home" className="flex items-center gap-3"><span className="block h-10 w-10 overflow-hidden rounded-full"><Image src="/weevmedia.jpeg" alt="Weev Media logo" width={45} height={40} className="h-10 w-10 scale-[1.32] object-cover" /></span><span className="font-script translate-y-[2px] text-3xl leading-none text-[#102b46]">Weev Media</span></Link>;
+  return <Link href="/" aria-label="Weev Media home" className="flex items-center gap-3"><span className="block h-10 w-10 overflow-hidden rounded-full"><Image src="/weevmedia.jpeg" alt="Weev Media logo" width={45} height={40} className="h-10 w-10 scale-[1.32] object-cover" /></span><span className="font-script translate-y-[2px] text-3xl leading-none text-[#17231d]">Weev Media</span></Link>;
 }
 
 export default function Home() {
   return <main className="min-h-screen overflow-hidden bg-[#f6f9fc] text-[#14263b]">
-    <header className="sticky top-0 z-50 border-b border-[#e2eaf2] bg-white/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#e9edf1] bg-white/90 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <Brand />
         <div className="hidden items-center gap-8 text-sm font-medium text-[#52677f] sm:flex">
@@ -27,42 +27,42 @@ export default function Home() {
     </header>
 
     <section className="relative isolate overflow-hidden">
-      <div aria-hidden className="absolute -right-36 -top-28 -z-10 h-[42rem] w-[42rem] rounded-full bg-[#dcecff] blur-3xl" />
-      <div aria-hidden className="absolute -left-32 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#e6f3fb] blur-3xl" />
+      <div aria-hidden className="absolute -right-36 -top-28 -z-10 h-[42rem] w-[42rem] rounded-full bg-[#f2f5f8] blur-3xl" />
+      <div aria-hidden className="absolute -left-32 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#f2f5f8] blur-3xl" />
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1fr_.9fr]">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#d9e7f5] bg-white px-4 py-2 text-xs font-bold tracking-[.12em] text-[#1456a0] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#20a6c7]" /> AI-DRIVEN TECHNOLOGY COMPANY</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#e6ebf0] bg-white px-4 py-2 text-xs font-bold tracking-[.12em] text-[#1456a0] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#1456a0]" /> AI-DRIVEN TECHNOLOGY COMPANY</span>
           <h1 className="mt-7 max-w-3xl text-5xl font-bold leading-[1.03] tracking-[-.06em] sm:text-6xl lg:text-[4.65rem]">We turn complex problems into <span className="text-[#087eaa]">intelligent products.</span></h1>
-          <p className="mt-7 max-w-xl text-lg leading-8 text-[#5e7085]">Weev Media is a technology company focused on practical AI, modern software engineering, and digital experiences that make everyday work and life simpler.</p>
+          <p className="mt-7 max-w-xl text-lg leading-8 text-[#637184]">Weev Media is a technology company focused on practical AI, modern software engineering, and digital experiences that make everyday work and life simpler.</p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a href="#capabilities" className="rounded-full bg-[#1456a0] px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-[#103f7c]">Explore what we do <span className="ml-2">→</span></a>
-            <a href="#products" className="rounded-full border border-[#d5e1ef] bg-white px-7 py-3.5 text-sm font-semibold text-[#23476c] transition hover:border-[#8dbad6]">See our products</a>
+            <a href="#products" className="rounded-full border border-[#dce2e8] bg-white px-7 py-3.5 text-sm font-semibold text-[#31465c] transition hover:border-[#aebbc8]">See our products</a>
           </div>
-          <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#6b7d91]"><span>Applied AI</span><span>·</span><span>Software engineering</span><span>·</span><span>Digital products</span></div>
+          <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#637184]"><span>Applied AI</span><span>·</span><span>Software engineering</span><span>·</span><span>Digital products</span></div>
         </div>
 
         <div className="relative mx-auto w-full max-w-[560px]">
-          <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#b9d9f5] via-[#e4f2fa] to-[#c8e7f4] blur-3xl" />
+          <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#d7e0e8] via-[#f5f7f9] to-[#e9eef2] blur-3xl" />
           <div className="relative rounded-[2.2rem] border border-white/80 bg-white/90 p-5 shadow-[0_30px_90px_-35px_rgba(20,86,160,.20)] backdrop-blur sm:p-7">
-            <div className="flex items-center justify-between border-b border-[#e4ebf3] pb-5"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-[#66849d]">The Weev approach</p><p className="mt-1 text-lg font-bold">From challenge to solution</p></div><div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e7f4eb] text-xl text-[#1456a0]">✳</div></div>
+            <div className="flex items-center justify-between border-b border-[#edf0f3] pb-5"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-[#748394]">The Weev approach</p><p className="mt-1 text-lg font-bold">From challenge to solution</p></div><div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e7f4eb] text-xl text-[#1456a0]">✳</div></div>
             <div className="mt-6 space-y-3">
-              <div className="rounded-2xl border border-[#e3ebf4] bg-[#fbfdff] p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e5f2fa] font-bold text-[#1456a0]">01</span><div><p className="text-sm font-bold">Understand the problem</p><p className="mt-0.5 text-xs text-[#718196]">People, context, and the real need</p></div></div></div>
-              <div className="ml-5 h-4 w-px bg-[#b5d3e8]" />
-              <div className="rounded-2xl border border-[#d6e8f4] bg-[#edf6fb] p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#d4eafa] font-bold text-[#1456a0]">02</span><div><p className="text-sm font-bold">Apply the right technology</p><p className="mt-0.5 text-xs text-[#6d8374]">AI, software, and thoughtful design</p></div></div></div>
-              <div className="ml-5 h-4 w-px bg-[#b5d3e8]" />
-              <div className="rounded-2xl border border-[#dbeaf4] bg-white p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1456a0] font-bold text-white">03</span><div><p className="text-sm font-bold">Build something useful</p><p className="mt-0.5 text-xs text-[#718196]">A practical product or experience</p></div></div></div>
+              <div className="rounded-2xl border border-[#f7f9fa] bg-[#fbfdff] p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e5f2fa] font-bold text-[#1456a0]">01</span><div><p className="text-sm font-bold">Understand the problem</p><p className="mt-0.5 text-xs text-[#748394]">People, context, and the real need</p></div></div></div>
+              <div className="ml-5 h-4 w-px bg-[#d6dde4]" />
+              <div className="rounded-2xl border border-[#e8edf1] bg-[#f4f6f8] p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e5ebef] font-bold text-[#1456a0]">02</span><div><p className="text-sm font-bold">Apply the right technology</p><p className="mt-0.5 text-xs text-[#6d8374]">AI, software, and thoughtful design</p></div></div></div>
+              <div className="ml-5 h-4 w-px bg-[#d6dde4]" />
+              <div className="rounded-2xl border border-[#e8edf1] bg-white p-4"><div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1456a0] font-bold text-white">03</span><div><p className="text-sm font-bold">Build something useful</p><p className="mt-0.5 text-xs text-[#748394]">A practical product or experience</p></div></div></div>
             </div>
-            <div className="mt-6 flex items-center justify-between rounded-xl bg-[#173d2b] px-4 py-3 text-white"><span className="text-xs font-semibold tracking-wide">INTELLIGENCE WITH PURPOSE</span><span className="text-lg text-[#8bd8e8]">↗</span></div>
+            <div className="mt-6 flex items-center justify-between rounded-xl bg-[#173d2b] px-4 py-3 text-white"><span className="text-xs font-semibold tracking-wide">INTELLIGENCE WITH PURPOSE</span><span className="text-lg text-[#a8c6df]">↗</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="capabilities" className="border-y border-[#e2eaf2] bg-white">
+    <section id="capabilities" className="border-y border-[#e9edf1] bg-white">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-        <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#1456a0]">What we do</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Technology should move things forward.</h2><p className="mt-5 text-lg leading-8 text-[#5e7085]">We bring together the right mix of intelligence, engineering, and product thinking to create solutions with a clear purpose.</p></div>
+        <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#1456a0]">What we do</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Technology should move things forward.</h2><p className="mt-5 text-lg leading-8 text-[#637184]">We bring together the right mix of intelligence, engineering, and product thinking to create solutions with a clear purpose.</p></div>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {capabilities.map(item=><article key={item.number} className="rounded-[1.8rem] border border-[#e2eaf2] bg-[#f7faff] p-7 transition hover:-translate-y-1 hover:border-[#b5d4e8] hover:shadow-xl hover:shadow-emerald-100/60 sm:p-9"><div className="flex items-center justify-between"><span className="font-mono text-xs text-[#7294ae]">{item.number}</span><span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e5f1f8] text-xl text-[#1456a0]">{item.icon}</span></div><h3 className="mt-9 text-xl font-bold">{item.title}</h3><p className="mt-3 leading-7 text-[#5e7085]">{item.body}</p></article>)}
+          {capabilities.map(item=><article key={item.number} className="rounded-[1.8rem] border border-[#e9edf1] bg-[#f8fafb] p-7 transition hover:-translate-y-1 hover:border-[#d5dfe7] hover:shadow-xl hover:shadow-emerald-100/60 sm:p-9"><div className="flex items-center justify-between"><span className="font-mono text-xs text-[#748394]">{item.number}</span><span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#edf1f4] text-xl text-[#1456a0]">{item.icon}</span></div><h3 className="mt-9 text-xl font-bold">{item.title}</h3><p className="mt-3 leading-7 text-[#637184]">{item.body}</p></article>)}
         </div>
       </div>
     </section>
