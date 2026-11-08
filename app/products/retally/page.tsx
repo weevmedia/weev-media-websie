@@ -18,8 +18,28 @@ function Brand() {
   return <Link href="/" aria-label="Weev Media home" className="flex items-center gap-3"><span className="block h-10 w-10 overflow-hidden rounded-full"><Image src="/weevmedia.jpeg" alt="Weev Media logo" width={45} height={40} className="h-10 w-10 scale-[1.32] object-cover" /></span><span className="font-script translate-y-[2px] text-3xl leading-none text-[#24203b]">Weev Media</span></Link>;
 }
 
+const appScreenshots = [
+  "IMG_2089.PNG", "IMG_2090.PNG", "IMG_2091.PNG", "IMG_2092.PNG",
+  "IMG_2093.PNG", "IMG_2094.PNG", "IMG_2095.PNG", "IMG_2096.PNG",
+  "IMG_2097.PNG", "IMG_2098.PNG", "IMG_2099.PNG", "IMG_2100.PNG",
+  "IMG_2101.PNG", "IMG_2102.PNG", "IMG_2103.PNG", "IMG_2104.PNG",
+  "IMG_2105.PNG",
+];
+
 function AppMockup() {
-  return <div className="relative mx-auto w-full max-w-[520px]"><div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#d8c8ff] via-[#e7e1ff] to-[#c9f2e7] blur-3xl" /><div className="relative grid grid-cols-[.88fr_1.12fr] items-center gap-3 sm:gap-4"><div className="z-10 -mr-8 rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-violet-200/80 sm:-mr-12 sm:p-4"><div className="rounded-[1.5rem] bg-[#f5f2fc] p-4"><div className="flex items-center justify-between"><span className="text-[10px] font-bold">ReTally</span><span className="text-[9px] text-[#8d849f]">•••</span></div><p className="mt-7 text-[10px] text-[#827a95]">Monthly budget</p><p className="mt-1 text-2xl font-bold">$600</p><div className="mt-3 h-2 rounded-full bg-[#e4dcf6]"><div className="h-2 w-[38%] rounded-full bg-[#8b62e4]" /></div><p className="mt-2 text-[9px] text-[#8d849f]">$473.05 remaining</p><div className="mt-7 rounded-xl bg-white p-3"><p className="text-[9px] text-[#8d849f]">Recent purchase</p><p className="mt-1 text-xs font-bold">Fresh Market</p><p className="mt-1 text-[10px] text-[#8d849f]">8 items · Today</p><p className="mt-3 text-right text-sm font-bold">$48.32</p></div></div></div><div className="rounded-[2.4rem] border-[5px] border-[#28243a] bg-white p-3 shadow-2xl shadow-violet-300/60 sm:rounded-[2.8rem] sm:border-[7px] sm:p-4"><div className="rounded-[1.8rem] bg-[#fbfaff] p-4 sm:p-5"><div className="flex items-center justify-between"><span className="text-xs font-bold">Good afternoon</span><span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#7046d8] text-sm font-black text-white">R</span></div><p className="mt-6 text-[10px] text-[#8d849f]">Your spending this month</p><p className="mt-1 text-3xl font-bold tracking-tight">$126.95</p><div className="mt-4 flex h-20 items-end gap-2">{[35,54,43,72,50,85,65].map((v,i)=><div key={i} className="flex-1 rounded-t-md bg-gradient-to-t from-[#8b62e4] to-[#cbb8f7]" style={{height:v+"%"}} />)}</div><div className="mt-5 grid grid-cols-2 gap-2"><div className="rounded-xl bg-white p-3"><p className="text-[9px] text-[#8d849f]">Receipts</p><p className="mt-1 text-xl font-bold">08</p></div><div className="rounded-xl bg-[#eaf8f2] p-3"><p className="text-[9px] text-[#658c7a]">Duplicates</p><p className="mt-1 text-xl font-bold text-[#16815d]">00</p></div></div><div className="mt-4 rounded-xl bg-white p-3"><p className="text-[10px] font-bold">Latest receipt</p><div className="mt-3 flex items-center justify-between"><div><p className="text-[10px] font-semibold">Market Basket</p><p className="text-[9px] text-[#8d849f]">Nov 6 · 8 items</p></div><p className="text-xs font-bold">$48.32</p></div></div></div><div className="py-3 text-center text-[9px] font-semibold uppercase tracking-[.18em] text-[#9b94ad]">A clearer view of every shop</div></div></div></div>;
+  return <div className="relative mx-auto w-full max-w-[560px]">
+    <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#d8c8ff] via-[#e7e1ff] to-[#c9f2e7] blur-3xl" />
+    <div className="relative grid grid-cols-3 items-center gap-2 sm:gap-4">
+      {appScreenshots.slice(0, 3).map((file, index) => (
+        <div key={file} className={`relative overflow-hidden rounded-[1.5rem] border-[5px] border-[#28243a] bg-white p-1.5 shadow-2xl shadow-violet-300/60 sm:rounded-[2rem] sm:border-[7px] sm:p-2 ${index === 1 ? "z-10 -translate-y-5 sm:-translate-y-8" : "mt-8 sm:mt-12"}`}>
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1rem] bg-[#f5f2fc] sm:rounded-[1.4rem]">
+            <Image src={`/images/retally/${file}`} alt={`ReTally app screen ${index + 1}`} fill priority={index === 1} sizes="(max-width: 640px) 30vw, 180px" className="object-cover" />
+          </div>
+        </div>
+      ))}
+    </div>
+    <p className="relative mt-5 text-center text-xs font-semibold uppercase tracking-[.18em] text-[#8d849f]">A clearer view of every shop</p>
+  </div>;
 }
 
 export default function ReTallyPage() {
