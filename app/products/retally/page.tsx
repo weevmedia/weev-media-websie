@@ -27,23 +27,18 @@ const appScreenshots = [
 ];
 
 function AppMockup() {
-  const showcase = [
-    { file: appScreenshots[0], position: "left-[2%] top-[10%] z-10", tilt: "-rotate-[11deg]" },
-    { file: appScreenshots[2], position: "left-[31%] top-[1%] z-20", tilt: "rotate-[5deg]" },
-    { file: appScreenshots[4], position: "left-[61%] top-[9%] z-10", tilt: "rotate-[12deg]" },
-    { file: appScreenshots[7], position: "left-[14%] top-[43%] z-30", tilt: "-rotate-[7deg]" },
-    { file: appScreenshots[10], position: "left-[48%] top-[42%] z-20", tilt: "rotate-[8deg]" },
-  ];
-  return <div className="relative mx-auto aspect-[1/1.12] w-full max-w-[650px]">
-    <div aria-hidden className="absolute inset-[8%] rounded-full bg-[#d9f2e3] blur-3xl" />
-    {showcase.map((screen, index) => (
-      <div key={screen.file} className={`absolute ${screen.position} w-[36%] overflow-hidden rounded-[1.35rem] border-[5px] border-[#203b2c] bg-white p-1 shadow-[0_24px_55px_-18px_rgba(20,75,48,.35)] sm:rounded-[1.8rem] sm:border-[7px] sm:p-1.5 ${screen.tilt}`}>
-        <div className="relative aspect-[9/19.5] overflow-hidden rounded-[.9rem] bg-[#eff5f1] sm:rounded-[1.25rem]">
-          <Image src={`/images/retally/${screen.file}`} alt={`ReTally app screen ${index + 1}`} fill priority={index < 3} sizes="(max-width: 640px) 32vw, 220px" className="object-cover" />
+  return <div className="relative mx-auto w-full max-w-[560px]">
+    <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#cce8d5] via-[#e2f1e7] to-[#c9edda] blur-3xl" />
+    <div className="relative grid grid-cols-3 items-center gap-2 sm:gap-4">
+      {appScreenshots.slice(0, 3).map((file, index) => (
+        <div key={file} className={`relative overflow-hidden rounded-[1.5rem] border-[5px] border-[#183b2a] bg-white p-1.5 shadow-2xl shadow-emerald-100/60 sm:rounded-[2rem] sm:border-[7px] sm:p-2 ${index === 1 ? "z-10 -translate-y-5 sm:-translate-y-8" : "mt-8 sm:mt-12"}`}>
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1rem] bg-[#eff5f1] sm:rounded-[1.4rem]">
+            <Image src={`/images/retally/${file}`} alt={`ReTally app screen ${index + 1}`} fill priority={index === 1} sizes="(max-width: 640px) 30vw, 180px" className="object-cover" />
+          </div>
         </div>
-      </div>
-    ))}
-    <p className="absolute -bottom-2 left-0 right-0 text-center text-[10px] font-semibold uppercase tracking-[.18em] text-[#829087] sm:text-xs">A clearer view of every shop</p>
+      ))}
+    </div>
+    <p className="relative mt-5 text-center text-xs font-semibold uppercase tracking-[.18em] text-[#829087]">A clearer view of every shop</p>
   </div>;
 }
 
