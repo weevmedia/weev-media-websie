@@ -27,19 +27,18 @@ const appScreenshots = [
 ];
 
 function AppMockup() {
-  const rotations = [-12, 10, -9, 13, 11, -11, 8, -13, -10, 12, -8, 11, 13, -9, 10, -12, 8];
-  return <div className="relative mx-auto w-full max-w-[720px] py-8">
-    <div aria-hidden className="absolute inset-[8%] rounded-full bg-[#d9f2e3] blur-3xl" />
-    <div className="relative grid grid-cols-4 items-center justify-items-center gap-x-1 gap-y-5 sm:gap-x-3 sm:gap-y-8">
-      {appScreenshots.map((file, index) => (
-        <div key={file} className="relative z-0 w-[88%] overflow-hidden rounded-[1rem] border-[3px] border-[#203b2c] bg-white p-1 shadow-[0_18px_38px_-15px_rgba(20,75,48,.35)] transition-transform duration-300 hover:z-20 hover:scale-105 sm:rounded-[1.5rem] sm:border-[5px] sm:p-1.5" style={{ transform: `rotate(${rotations[index]}deg)` }}>
-          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[.7rem] bg-[#eff5f1] sm:rounded-[1rem]">
-            <Image src={`/images/retally/${file}`} alt={`ReTally app screen ${index + 1}`} fill priority={index < 4} sizes="(max-width: 640px) 22vw, 160px" className="object-cover" />
+  return <div className="relative mx-auto w-full max-w-[560px]">
+    <div aria-hidden className="absolute inset-8 rounded-[3rem] bg-gradient-to-br from-[#cce8d5] via-[#e2f1e7] to-[#c9edda] blur-3xl" />
+    <div className="relative grid grid-cols-3 items-center gap-2 sm:gap-4">
+      {appScreenshots.slice(0, 3).map((file, index) => (
+        <div key={file} className={`relative overflow-hidden rounded-[1.5rem] border-[5px] border-[#183b2a] bg-white p-1.5 shadow-2xl shadow-emerald-100/60 sm:rounded-[2rem] sm:border-[7px] sm:p-2 ${index === 1 ? "z-10 -translate-y-5 sm:-translate-y-8" : "mt-8 sm:mt-12"}`}>
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1rem] bg-[#eff5f1] sm:rounded-[1.4rem]">
+            <Image src={`/images/retally/${file}`} alt={`ReTally app screen ${index + 1}`} fill priority={index === 1} sizes="(max-width: 640px) 30vw, 180px" className="object-cover" />
           </div>
         </div>
       ))}
     </div>
-    <p className="relative mt-7 text-center text-[10px] font-semibold uppercase tracking-[.18em] text-[#829087] sm:text-xs">A clearer view of every shop</p>
+    <p className="relative mt-5 text-center text-xs font-semibold uppercase tracking-[.18em] text-[#829087]">A clearer view of every shop</p>
   </div>;
 }
 
